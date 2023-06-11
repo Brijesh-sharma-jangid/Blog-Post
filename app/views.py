@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def home(request):
-    pass
+    return render(request, 'app/home.html')
 
 def about(request):
-    pass
+    return render(request, 'app/about.html', {'title':"msg"})
