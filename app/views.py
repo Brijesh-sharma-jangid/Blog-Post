@@ -5,8 +5,9 @@ from .models import Post
 
 def home(request):
     post = Post.objects.all()
+    print(post)
     return render(request, 'app/home.html', {
-        'Post' : post
+        'posts' : post
     })
 
 def about(request):
